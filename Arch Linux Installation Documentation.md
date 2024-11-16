@@ -1,5 +1,5 @@
 ---
-title: ArchLinux Install
+title: ArchLinux_Install
 filename: Arch Linux Installation Documentation.md
 ---
 
