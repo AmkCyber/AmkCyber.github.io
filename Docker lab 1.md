@@ -1,3 +1,8 @@
+---
+title: DockerInstall
+filename: Docker lab 1.md
+---
+
 1. Docker installation
 	1. Set up Docker's apt repository
 		1. sudo apt-get update
