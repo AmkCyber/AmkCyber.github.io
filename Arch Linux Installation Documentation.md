@@ -1,8 +1,3 @@
----
-title: ArchLinux_Install
-filename: Arch Linux Installation Documentation.md
----
-
 1. Installation guide/wiki
 	1. https://wiki.archlinux.org/title/Installation_guide
 	
