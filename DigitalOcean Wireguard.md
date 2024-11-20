@@ -144,9 +144,11 @@ Laptop: Post-WireGuard
 
 Phone: Pre-WireGuard
 
-![1000001078](https://github.com/user-attachments/assets/060881f5-0c91-4cbd-8b5a-8ffdf8151eb6)
+<img width="534" alt="1000001078" src="https://github.com/user-attachments/assets/ddcec05e-4431-4c57-aca8-ea5aacb1c608">
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 Phone Post-WireGuard
-![1000001079](https://github.com/user-attachments/assets/9cd52952-68c9-486a-9f09-fd1b3c8e2129)
+
+<img width="540" alt="1000001079" src="https://github.com/user-attachments/assets/3e0f462b-919c-4800-b7f3-bb84e1336ca7">
+
