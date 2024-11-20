@@ -34,36 +34,36 @@ Terminal:
 		   mkdir -p ~/wireguard/config/
 		   nano ~/wireguard/docker-compose.yml
 		2. Paste config below into the nano:
-			1. 
-				version: '3.8'
-				services:
-				  wireguard:
-				    container_name: wireguard
-				    image: linuxserver/wireguard
-				    environment:
-				      - PUID=1000
-				      - PGID=1000
-				      - TZ=Asia/Hong_Kong
-				      - SERVERURL=1.2.3.4
-				      - SERVERPORT=51820
-				      - PEERS=pc1,pc2,phone1
-				      - PEERDNS=auto
-				      - INTERNAL_SUBNET=10.0.0.0
-				    ports:
-				      - 51820:51820/udp
-				    volumes:
-				      - type: bind
-				        source: ./config/
-				        target: /config/
-				      - type: bind
-				        source: /lib/modules
-				        target: /lib/modules
-				    restart: always
-				    cap_add:
-				      - NET_ADMIN
-				      - SYS_MODULE
-				    sysctls:
-				      - net.ipv4.conf.all.src_valid_mark=1
+			1. Contents to paste:
+				- version: '3.8'
+				- services:
+				  - wireguard:
+				    - container_name: wireguard
+				    - image: linuxserver/wireguard
+				    - environment:
+				       - PUID=1000
+				       - PGID=1000
+				       - TZ=Asia/Hong_Kong
+				       - SERVERURL=1.2.3.4
+				       - SERVERPORT=51820
+				       - PEERS=pc1,pc2,phone1
+				       - PEERDNS=auto
+				       - INTERNAL_SUBNET=10.0.0.0
+				    - ports:
+				       - 51820:51820/udp
+				    - volumes:
+				       - type: bind
+				       - source: ./config/
+				       - target: /config/
+				       - type: bind
+				       - source: /lib/modules
+				       - target: /lib/modules
+				    - restart: always
+				    - cap_add:
+				       - NET_ADMIN
+				       - SYS_MODULE
+				    - sysctls:
+				       - net.ipv4.conf.all.src_valid_mark=1
 			2. TZ needs to be changed for your time zone, I am cst so i am in america/chicago which is CST6CDT
 			3. SERVERURL is the address of your droplet server, the one you used to in the ssh root@ command
 			4. Finally Peers needed to be changed, it is responsible for generating the user-config-files, I did not want to deviate from the guide so I did PEERS=3(it does the same as what is currently listed, just different names and definition), to allow for 3 devices to connect.
@@ -90,40 +90,42 @@ Terminal:
 	7. Give the tunnel a name and click save, afterwards hit the activate button and your vpn should work.
 
 6. Bonus:
-	1. Requirements
-		1. Want to use a port that maybe won’t be blocked on public WiFi (like 80)… you can change it in docker-compose.yml file BUT you have to set up port forwarding on your Ubuntu server to send port 80 comms to port 51820 in the Docker container. How? Not gonna tell you… that is why it is a BONUS.  
-	2. I tried it and failed. I used so many different commands that I think I lost track and forgot to write them down, essentially I edited docker-compose.yml to 80:51820/udp in the ports area, then tried routing and redirecting in Ip table for port 80 to port 51820. I think I leaned too heavily into the internet and forums because I probably wrote a command or saved the tables incorrectly and now wireguard can activate the tunnels and establish a vpn connection but a timeout error is produced when trying to display the QR codes I did in a previous step or visit a website while using the vpn.
+   1. Requirements:   Want to use a port that maybe won’t be blocked on public WiFi (like 80)… you can change it in docker-compose.yml file BUT you have to set up port forwarding on your Ubuntu server to send port 80 comms to port 51820 in the Docker container. How? Not gonna tell you… that is why it is a BONUS.
+      
+   2. Outcome:   I tried it and failed. I used so many different commands that I think I lost track and forgot to write them down, essentially I edited docker-compose.yml to 80:51820/udp in the ports area, then tried routing and redirecting in Ip table for port 80 to port 51820. I think I leaned too heavily into the internet and forums because I probably wrote a command or saved the tables incorrectly and now wireguard can activate the tunnels and establish a vpn connection but a timeout error is produced when trying to display the QR codes I did in a previous step or visit a website while using the vpn.
 		1. This project was still a lot of fun though learned a lot of lessons, such as how I need to remember to document more.
 
 
 
-My docker-compose.yml
-GNU nano 8.1                       docker-compose.yml                               version: '3.8'
-services:
-  wireguard:
-    container_name: wireguard
-    image: linuxserver/wireguard
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=CST6CDT
-      - SERVERURL=165.232.143.161
-      - SERVERPORT=51820
-      - PEERS=pc1,pc2,phone1
-      - PEERDNS=auto
-      - INTERNAL_SUBNET=10.0.0.0
-    ports:
+
+
+- My docker-compose.yml
+- GNU nano 8.1,  docker-compose.yml,  version: '3.8'
+- services:
+  - wireguard:
+    - container_name: wireguard
+    - image: linuxserver/wireguard
+    - environment:
+        - PUID=1000
+        - PGID=1000
+        - TZ=CST6CDT
+        - SERVERURL=165.232.143.161
+        - SERVERPORT=51820
+        - PEERS=pc1,pc2,phone1
+        - PEERDNS=auto
+        - INTERNAL_SUBNET=10.0.0.0
+    - ports:
       - 51820:51820/udp
-    volumes:
-      - type: bind
-        source: ./config/
-        target: /config/
-      - type: bind
-        source: /lib/modules
-        target: /lib/modules
-    restart: always
-    cap_add:
-      - NET_ADMIN
-      - SYS_MODULE
-    sysctls:
-      - net.ipv4.conf.all.src_valid_mark=1
+    - volumes:
+        - type: bind
+        - source: ./config/
+        - target: /config/
+        - type: bind
+        - source: /lib/modules
+        - target: /lib/modules
+    - restart: always
+    - cap_add:
+        - NET_ADMIN
+        - SYS_MODULE
+    - sysctls:
+        - net.ipv4.conf.all.src_valid_mark=1
