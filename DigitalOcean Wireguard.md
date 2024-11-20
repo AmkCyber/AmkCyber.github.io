@@ -129,3 +129,24 @@ Terminal:
         - SYS_MODULE
     - sysctls:
         - net.ipv4.conf.all.src_valid_mark=1
+
+
+Screenshots:
+
+Laptop:Pre-WireGuard
+<img width="611" alt="PC_PreWireguard" src="https://github.com/user-attachments/assets/0efa7ff3-c963-4ca7-a053-5003e7be6c98">
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Laptop: Post-WireGuard
+<img width="1193" alt="PC_PostWireGuard" src="https://github.com/user-attachments/assets/1fa090f4-90e9-48a7-9862-ecbb60711671">
+
+
+Phone: Pre-WireGuard
+
+![1000001078](https://github.com/user-attachments/assets/060881f5-0c91-4cbd-8b5a-8ffdf8151eb6)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Phone Post-WireGuard
+![1000001079](https://github.com/user-attachments/assets/9cd52952-68c9-486a-9f09-fd1b3c8e2129)
