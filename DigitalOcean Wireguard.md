@@ -1,8 +1,9 @@
 
 Ocean gate set up:
+1. I will not go very in-depth as the setup is very easy and intuitive. Create an account and make a droplet, set the droplet to a Linux distribution, choose the hardware specifications you desire, make a password, and select the data center closest to you. Click Create and copy the IP address of the server as you will need it later.
 
 Terminal:
-1. Connect to droplet you just made:
+1. Connect to the droplet you just made:
 	1. Cmd: ssh root@165.232.143.161
 	2. Say yes to continue connecting and input the password you made during setup
 2. Docker install: https://thematrix.dev/install-docker-and-docker-compose-on-ubuntu-20-04/
