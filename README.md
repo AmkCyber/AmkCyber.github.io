@@ -6,3 +6,5 @@ Arch Linux Installation: [Arch](https://github.com/AmkCyber/AmkCyber.github.io/b
 Docker Installation Lab: [Docker](https://github.com/AmkCyber/AmkCyber.github.io/blob/main/Docker%20lab.md)
 
 WireGuard Lab: [WireGuard](https://github.com/AmkCyber/AmkCyber.github.io/blob/main/DigitalOcean%20Wireguard.md)
+
+Text Editor: [Text Editor made from scratch in C](https://github.com/AmkCyber/AmkCyber.github.io/tree/main/Text%20Editor)
