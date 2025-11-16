@@ -233,7 +233,7 @@
     <div class="container">
 
         <div class="card">
-            <div class"=card-title">About Me</div>
+            <div class="card-title">About Me</div>
             <div class="card-content">
                 Undergraduate majoring in Cybersecurity with a minor in General Engineering. I made this website to tinker with HTML and CSS, as well as create a foundation for my portfolio.
             </div>
@@ -257,9 +257,7 @@
             <div class="card-title">Misc</div>
             <div class="card-content">
                 <div class="link-item">
-                    <a href="javascript:void(0)" onclick="clipEmail()">Contact Me</a>
-                    <div style="color: #808080; font-size: 14px; margin-top: 5px;">Send me an email!</div>
-                    <div id="copy-notification" style="color: #00ff00; font-size: 14px; margin-top: 5px; display: none;">Email copied to clipboard!</div>
+                    <div style="color: #808080; font-size: 20px; margin-top: 5px;">amk9665@utulsa.edu</div>
                 </div>
             </div>
         </div>
@@ -269,27 +267,6 @@
         <p style="font-size: 18px; margin-bottom: 15px; color: #00d9ff;">Built using HTML, CSS, and some AI to reduce learning curve :D</p>
         <p style="margin-top: 15px; font-size: 14px;"> designed by Aiden Kimmer</p>
     </footer>
-    
-    <script>
-        function clipEmail(){
-            const email = 'amk9665@utulsa.edu';
-
-            navigator.clipboard.writeText(email).then(function(){
-
-                const notification = document.getElementById('copy-notification');
-                notification.style.display = 'block';
-
-                setTimeout(function() {
-                    notification.style.display = 'none';
-                }, 3000);
-
-                }).catch(function(err) {
-                    alert('Failed to copy email. Try again');
-                });
-        }
-
-    </script>
-
 
 </html>
 </body>
