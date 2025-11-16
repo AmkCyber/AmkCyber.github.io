@@ -16,7 +16,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #0a0e27 0%, #373792 50%, #0c0c75 100%);
             color: #e0e0e0;
-            min-width: 100vh;
+            min-height: 100vh;
         }
 
         .hero {
@@ -41,6 +41,24 @@
             pointer-events: none;
         }
 
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: 100px;
+            border-top: 3px solid #00d9ff;
+            border-right: 3px solid #ff0066;
+            opacity: 0.6;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6;}
+            50% { opacity: 1; }
+        }
+
         .hero img {
             position: relative;
             z-index: 1;
@@ -51,7 +69,8 @@
         }
 
         .hero img:hover {
-            transform: scale(1.05);
+            transform: scale(1.08) rotate(2deg);
+            box-shadow: 0 0 40px rgba(0, 217, 255, 1), 0 0 80px rgba(255, 0, 102, 0.5);
         }
 
         .hero h1 {
@@ -181,7 +200,7 @@
 
         .footer p {
             color: #a0a0a0;
-            font-size: 8px 0;
+            font-size: 8px;
         }
 
         .glitch {
@@ -213,14 +232,14 @@
     <div class="container">
 
         <div class="card">
-            <div class"card-title">About Me</div>
+            <div class"=card-title">About Me</div>
             <div class="card-content">
                 Undergraduate majoring in Cybersecurity with a minor in General Engineering. I made this website to tinker with HTML and CSS, as well as create a foundation for my portfolio.
             </div>
         </div>
 
         <div class="card">
-            <div class"card-title">Projects</div>
+            <div class"=card-title">Projects</div>
             <div class="card-content">
                 <div class+"link-item">
                     <a href="https://github.com/AmkCyber/">Github</a>
