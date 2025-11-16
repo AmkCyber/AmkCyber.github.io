@@ -77,22 +77,49 @@
         }
 
         .navbar {
-            overflow: hidden;
-            background-color: #333;
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         }
 
         .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
+            color: 00d9ff;
+            padding: 18px 28px;
             text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .navbar a::before {
+            content:'';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background: linear-gradient(90deg, #00d9ff, #ff0066);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
         }
 
         .navbar a:hover {
-            background-color: #ddd;
-            color: black;
+            background: rgba(0, 217, 255, 0.1);
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0px 20px;
         }
         
         .container {
@@ -128,12 +155,18 @@
             padding: 40px 20px;
         }
 
+        .glitch {
+            position: relative;
+            display: inline-block;
+        }
+
     </style>
 </head>
 <body>
-    <div class = "header">
-        <img src="https://AmkCyber.github.io/assets/logo.jpg" alt="Aiden Kimmer" width="150" height="150" style="border-radius: 50%;">
-        <h1>Test Site AK</h1>
+    <div class = "hero">
+        <h1 class="glitch">
+            <img src="https://AmkCyber.github.io/assets/logo.jpg" alt="Aiden Kimmer" width="150" height="150" style="border-radius: 50%;">
+        </h1>
         <p> Welcome Hello World.</p>
     </div>
 
