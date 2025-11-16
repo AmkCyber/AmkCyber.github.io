@@ -77,7 +77,7 @@
         }
 
         .navbar {
-
+            background: rgba(10, 14, 39, 0.95);
             backdrop-filter: blur(10px);
             display: flex;
             justify-content: center;
@@ -85,6 +85,8 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         }
 
         .navbar a {
@@ -114,15 +116,81 @@
             color: #ffffff;
         }
 
+        .navbar a:hover::before {
+            width: 80%;
+        }
+
         .container {
             max-width: 1100px;
             margin: 60px auto;
             padding: 0px 20px;
         }
         
-        .container {
-            max-width: 800px;
-            margin: auto;
+        .card {
+            background: rgba(22, 33, 62, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            padding: 40px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.1), transparent);
+            transition: all 0.5s ease;
+        }
+
+        .card:hover {
+            border-color: rgba(0, 217, 255, 0.5);
+            box-shadow: 0 12px 40px rgba(0, 217, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        .card-title {
+            color: #00d9ff;
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-title::before {
+            content: '▸';
+            color: #ff0066;
+            font-size: 20px;
+        }
+
+        .card-content {
+            color: #c0c0c0;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        a:hover {
+            color: #ff0066;
         }
 
         .prompt {
@@ -135,27 +203,38 @@
             margin-bottom: 20px;
         }
 
-        a {
-            color: #ffffff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: #ff00ff;
-            text-decoration: underline;
-        }
-
         .footer {
+            background: rgba(10, 14, 39, 0.95);
+            text-align: center;
             position: relative;
             text-align: center;
             margin-top: 80px;
+            border-top: 2px solid #00d9ff;
             padding: 40px 20px;
+        }
+
+        .footer p {
+            color: #a0a0a0;
+            font-size: 8px 0;
         }
 
         .glitch {
             position: relative;
             display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            .navbar {
+                flex-wrap: wrap;
+            }
         }
 
     </style>
@@ -165,16 +244,27 @@
         <h1 class="glitch">
             <img src="https://AmkCyber.github.io/assets/logo.png" alt="Aiden Kimmer" width="150" height="150" style="border-radius: 50%;">
         </h1>
-        <p> Welcome Hello World.</p>
+        <p>Test</p>
     </div>
 
     </div class="navbar">
         <a href="https://github.com/AmkCyber/">Home</a>
         <a href="https://github.com/AmkCyber/AmkUnivCyber.github.io">Uni-course Projects</a>
-        <a href="https://aidenkimmer.github.io/projects.html">Youtube</a>
-        <a href="https://aidenkimmer.github.io/contact.html">Contact</a>
+        <a href="www.linkedin.com/in/aiden-mv-kimmer">Contact</a>
     </div>
+    
     <div class="container">
+
+        <div class="card">
+
+            <div class"card-title">About Me
+            </div>
+            <div class="card-content">
+                Undergraduate majoring in Cybersecurity with a minor in General Engineering.
+            </div>
+        </div>
+
+
 
         <div class="output">
             <span class="prompt">C:\Users\AidenKimmer&gt;</span> echo Hello, I'm Aiden Kimmer!
@@ -183,11 +273,11 @@
             <span class="prompt">C:\Users\AidenKimmer&gt;</span> echo I'm a cybersecurity student with an engineering minor, that made this website to tinker with HTML and CSS.
         </div>
         <div class="output">
-            <span class="prompt">C:\Users\AidenKimmer&gt;</span> echo Check out my work on
+            <span class="prompt">C:\Users\AidenKimmer&gt;</span> echo Want to contact me? Email me at akimmer14@gmail.com
         </div>
     </div>
 
-    <div class = "header">
+    <div class = "footer">
         <h2>Footer Section</h2>
     </div>
 
