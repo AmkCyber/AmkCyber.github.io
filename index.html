@@ -14,22 +14,66 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a0e27 0%, #6464cd 50%, #0c0c75 100%);
+            background: linear-gradient(135deg, #0a0e27 0%, #373792 50%, #0c0c75 100%);
             color: #e0e0e0;
             min-width: 100vh;
         }
 
-
-
-        .header {
-            padding: 60px;
+        .hero {
+            position: relative;
             text-align: center;
-            background: #34129c;
-            color: white;
+            padding: 100px 20px 80px;
+            background: linear-gradient(135deg, #0a0e27 0%, #16213e 100%);
+            overflow: hidden;
+            border-bottom: 2px solid #250f47;
         }
 
-        .header h1 {
-            font-size: 40px;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(0deg, rgba(0, 217,255, 0.03) 0px, transparent 1px, transparent 2px, rgba(0, 217,255, 0.03) 3px),
+                repeating-linear-gradient(90deg, rgba(0, 217,255, 0.03) 0px, transparent 1px, transparent 2px, rgba(0, 217,255, 0.03) 3px);
+            animation: rotate 20s linear infinite;
+            z-index: 0;
+        }
+
+        .hero img {
+            position: relative;
+            z-index: 1;
+            border: 3px solid #00d9ff;
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .hero img:hover {
+            transform: scale(1.05);
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 1;
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #00d9ff 0%, #ff0066 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            position: relative;
+            z-index: 1;
+            font-size: 20px;
+            color: #a0a0a0;
+            letter-spacing: 1px;
         }
 
         .navbar {
@@ -78,9 +122,10 @@
         }
 
         .footer {
-            background: #ddd;
+            position: relative;
             text-align: center;
-            padding: 0px;
+            margin-top: 80px;
+            padding: 40px 20px;
         }
 
     </style>
