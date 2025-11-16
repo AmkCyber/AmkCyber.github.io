@@ -76,50 +76,6 @@
             letter-spacing: 1px;
         }
 
-        .navbar {
-            background: rgba(10, 14, 39, 0.95);
-            backdrop-filter: blur(10px);
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0, 217, 255, 0.3);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .navbar a {
-            color: 00d9ff;
-            padding: 18px 28px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            position: relative;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-
-        .navbar a::before {
-            content:'';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 50%;
-            background: linear-gradient(90deg, #00d9ff, #ff0066);
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        .navbar a:hover {
-            background: rgba(0, 217, 255, 0.1);
-            color: #ffffff;
-        }
-
-        .navbar a:hover::before {
-            width: 80%;
-        }
-
         .container {
             max-width: 1100px;
             margin: 60px auto;
@@ -183,9 +139,9 @@
         }
 
         a {
-            color: #ffffff;
+            color: #00d9ff;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: all 0.3s ease;
             position: relative;
         }
 
@@ -193,9 +149,19 @@
             color: #ff0066;
         }
 
-        .prompt {
-            color: #add714;
-            margin-left: 10px;
+        .link-item {
+            padding: 15px 20px;
+            background: rgba(0, 217, 255, 0.5);
+            border-left: 3px solid #00d9ff;
+            border-radius: 4px;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+        }
+
+        .link-item:hover {
+            background: rgba(0, 217, 255, 0.15);
+            border-left-color: #ff0066;
+            transform: translateX(10px);
         }
 
         .output {
@@ -231,11 +197,8 @@
             .card {
                 padding: 25px;
             }
-
-            .navbar {
-                flex-wrap: wrap;
-            }
         }
+
 
     </style>
 </head>
@@ -256,30 +219,31 @@
     <div class="container">
 
         <div class="card">
-
-            <div class"card-title">About Me
-            </div>
+            <div class"card-title">About Me</div>
             <div class="card-content">
-                Undergraduate majoring in Cybersecurity with a minor in General Engineering.
+                Undergraduate majoring in Cybersecurity with a minor in General Engineering. I made this website to tinker with HTML and CSS, as well as create a foundation for my portfolio.
             </div>
         </div>
 
-
-
-        <div class="output">
-            <span class="prompt">C:\Users\AidenKimmer&gt;</span> echo Hello, I'm Aiden Kimmer!
-        </div>
-        <div class="output">
-            <span class="prompt">C:\Users\AidenKimmer&gt;</span> echo I'm a cybersecurity student with an engineering minor, that made this website to tinker with HTML and CSS.
-        </div>
-        <div class="output">
-            <span class="prompt">C:\Users\AidenKimmer&gt;</span> echo Want to contact me? Email me at akimmer14@gmail.com
+        <div class="card">
+            <div class"card-title">Projects</div>
+            <div class="card-content">
+                <div class+"link-item">
+                    <a href="https://github.com/AmkCyber/">Github</a>
+                    <div style="color: #808080; font-size: 14px; margin-top: 5px;">Repositories and contributions</div>
+                </div>
+                <div class+"link-item">
+                    <a href="https://github.com/AmkCyber/AmkUnivCyber.github.io">University Course Projects</a>
+                    <div style="color: #808080; font-size: 14px; margin-top: 5px;">Academic Work</div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class = "footer">
-        <h2>Footer Section</h2>
-    </div>
+    <footer class = "footer">
+        <p style="font-size: 18px; margin-bottom: 15px; color: #00d9ff;">Built using HTML, CSS, and some AI to reduce learning curve :D</p>
+        <p style="margin-top: 15px; font-size: 14px;"> designed by Aiden Kimmer</p>
+    </footer>
 
-<body>
-<html>
+</html>
+</body>
